@@ -1,0 +1,9 @@
+{
+    "name": "Native Test Module",
+    "scriptUrl": "http://localhost:3000/native-test.js",
+    "sourceName": "NativeTest",
+    "icon": "https://via.placeholder.com/50",
+    "version": "1.0.0",
+    "description": "Tests the Native module loader implementation",
+    "author": "Antigravity"
+}
