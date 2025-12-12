@@ -1,16 +1,94 @@
-# React + Vite
+# Sora WebUI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, feature-rich web interface for streaming content with cross-device synchronization.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 **Beautiful UI** - Modern, responsive design with multiple themes
+- 🔐 **User Authentication** - Secure email/password authentication via Supabase
+- ☁️ **Cloud Sync** - Automatic synchronization of settings, modules, and watch history across devices
+- 📱 **Cross-Platform** - Works seamlessly on desktop, tablet, and mobile
+- 🎭 **Module System** - Support for custom streaming modules
+- 📺 **Watch History** - Track your viewing progress with continue watching functionality
+- ⚙️ **Customizable** - Extensive settings for appearance, subtitles, and playback
 
-## React Compiler
+## Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js 16+ and npm
+- A Supabase account (for authentication and sync features)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/ordzy/Sora-WebUI.git
+   cd Sora-WebUI
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Configure Supabase (Optional - for auth & sync)**
+   
+   Create a `.env.local` file in the root directory:
+   ```env
+   VITE_SUPABASE_URL=your_supabase_project_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+   Then run the SQL schema in your Supabase project (see `supabase-schema.sql`)
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+## Configuration
+
+### Without Supabase
+
+The app works perfectly without Supabase - authentication and sync features will be disabled, and data will be stored locally in your browser.
+
+### With Supabase
+
+When configured with Supabase credentials:
+- User authentication with email/password
+- Automatic data synchronization every 15 seconds
+- Cross-device sync for settings, modules, and watch history
+- Secure data storage with Row Level Security (RLS)
+
+## Tech Stack
+
+- **React** - UI framework
+- **Vite** - Build tool and dev server
+- **Supabase** - Authentication and database
+- **Tailwind CSS** - Styling
+- **HLS.js** - Video streaming support
+
+## Project Structure
+
+```
+src/
+├── components/        # React components
+├── contexts/          # React contexts (Auth, etc.)
+├── lib/              # Utilities and services
+├── constants/        # App constants (themes, etc.)
+└── index.css         # Global styles
+```
+
+## License
+
+This project is open source and available under the MIT License.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
