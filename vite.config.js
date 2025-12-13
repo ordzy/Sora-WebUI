@@ -165,6 +165,7 @@ const customProxyPlugin = () => ({
 export default defineConfig({
   plugins: [react(), customProxyPlugin()],
   server: {
-    // Empty server config
+    host: '127.0.0.1',
+    port: 3000,
   }
 })
