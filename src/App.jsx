@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { themes } from './constants/themes';
 import SearchBar from './components/SearchBar';
 import ContentGrid from './components/ContentGrid';
@@ -991,6 +992,8 @@ function App() {
                         </div>
                     </div>
                 )}
+
+                <Analytics />
             </div>
         </div>
     );
