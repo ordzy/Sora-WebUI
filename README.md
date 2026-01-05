@@ -1,7 +1,7 @@
 # Sora WebUI
 
 <image alt="react" src="https://cdn.jsdelivr.net/gh/JMcrafter26/badges@main/src/assets/built-with/react/cozy.svg"> <image alt="vite" src="https://cdn.jsdelivr.net/gh/JMcrafter26/badges@main/src/assets/built-with/vite/cozy.svg">
-A web interface for [Sora](https://github.com/cracni1/Sora/).
+<br>A web interface for [Sora](https://github.com/cracni1/Sora/).
 
 ## Features
 
