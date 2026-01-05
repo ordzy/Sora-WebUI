@@ -23,9 +23,9 @@
 src/
 ├── components/        # React components
 ├── contexts/          # React contexts (Auth, etc.)
-├── lib/              # Utilities and services
-├── constants/        # App constants (themes, etc.)
-└── index.css         # Global styles
+├── lib/               # Utilities and services
+├── constants/         # App constants (themes, etc.)
+└── index.css          # Global styles
 ```
 
 ## License
